@@ -1,0 +1,634 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furnace</title>
+
+    <!--Css-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Add Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- load Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <link
+      rel="apple-touch-icon"
+      href="https://firebasestorage.googleapis.com/v0/b/furnace-c4069.appspot.com/o/android-icon-192x192.png?alt=media&token=feb3574a-0aff-4b8c-9b31-ae3f8e89597b"
+    />
+
+    <!-- load custom font -->
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Get bootstrap CSS -->
+    <!-- bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap font awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--w3c shcool--->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!--Google font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow:500|Titillium+Web|Varela+Round"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap script -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap toggle switch -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+
+    <!-- Copy Firebase to your web app -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+       Your web app's Firebase configuration'
+       var firebaseConfig = {
+         apiKey: "AIzaSyCuWkHp_g9aLckpun0MgWRVXugbI40iXsE",
+         authDomain: "furnace-c4069.firebaseapp.com",
+         databaseURL: "https://furnace-c4069.firebaseio.com",
+         projectId: "furnace-c4069",
+         storageBucket: "furnace-c4069.appspot.com",
+         messagingSenderId: "809059919567",
+         appId: "1:809059919567:web:5e7316af029e495d"
+       };
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+<script>
+  // Your web app's Firebase configuration
+//  var firebaseConfig = {
+  //  apiKey: "AIzaSyBXFvGEWt2q8exR3Vw0tmpZIV8Jm9udJcU",
+   // authDomain: "furnace-test-server.firebaseapp.com",
+    //databaseURL: "https://furnace-test-server.firebaseio.com",
+    //projectId: "furnace-test-server",
+    //storageBucket: "furnace-test-server.appspot.com",
+    //messagingSenderId: "126702049509",
+    //appId: "1:126702049509:web:ec88fa6ffc026ebc"
+  //};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <!-- Copy Firebase to your web app -->
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+
+    <script src="S4.js"></script>
+    <script src="H4.js"></script>
+    <script src="T4.js"></script>
+    <script src="justgage.js"></script>
+    <script src="raphael-2.1.4.min.js"></script>
+  </head>
+
+  <body onload="initial()">
+    <!-- Image and text -->
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img
+          src="images/image/Npru-logo.png"
+          width="30"
+          height="32"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        NPRU Smart Furnace
+      </a>
+
+      <i class="fa fa-power-off"> <img id="ledPower" src="images/led/ledblue.png" height="40" width="40" alt=""></i>
+    </nav>
+
+    <br>
+    <div class="jumbotron">
+      <br />
+
+      <!-- Monitoring -->
+      <div class="card">
+        <div class="card-header">
+            <h4 id="head4">Monitoring</h4>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card" style="max-width: 18rem;">
+                            <div class="card-header"><strong>Voltage</strong></div>
+                            <div class="card-body">
+                                <div id="T4" style="width: 200px; height: 150px; display: inline-block;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card" style="max-width: 18rem;">
+                            <div class="card-header"><strong>Current</strong></div>
+                            <div class="card-body">
+                                <div id="H4" style="width: 200px; height: 150px; display: inline-block;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card" style="max-width: 18rem;">
+                            <div class="card-header"><strong>Temperature</strong></div>
+                            <div class="card-body">
+                                <div id="S4" style="width: 200px; height: 150px; display: inline-block;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <br>
+
+        <!-- Lamp Status -->
+        <div class="card">
+            <div class="card-header">
+                <h4 id="head4">Status</h4>
+            </div>
+
+            <div class=card-body>
+                <table style="width:100%; text-align:center;">
+                    <tr>
+                        <td><i class="fa fa-fire"></i> Heater</td>
+                        <td><i class="fa fa-check-circle"></i> Finish</td>
+                        <td><i class="fa fa-plus-square"></i> Safety</td>
+                    </tr>
+                    <tr>
+                        <td><img id="ledHeater" src="images/led/ledred.png" height="40" width="40" alt=""></td>
+                        <td><img id="ledFinish" src="images/led/ledgreen.png" height="40" width="40" alt=""></td>
+                        <td><img id="ledAlarm" src="images/led/ledgreen.png" height="40" width="40" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td><input id="btnHeater" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="outline-danger">
+                        <td><input id="btnFinish" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="outline-danger"></td>
+                        <td><input id="btnAlarm" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="outline-danger"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Motor Control -->
+        <div class="card">
+            <div class="card-header">
+                <h4 id="head4">Motor</h4>
+            </div>
+
+            <div class=card-body>
+                <table style="width:100%; text-align:center;">
+                    <tr>
+                        <td><strong>Enable</strong></td>
+                        <td colspan="3"><strong>Direction</strong></td>
+                    </tr>
+                    <tr>
+                        <td><input id="btnEnable" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="outline-danger"></td>
+                        <td><button type="button" class="btn btn-outline-warning" id="btnUp"><i class="fa fa-arrow-up"></i>UP</button></td>
+                        <td><button type="button" class="btn btn-outline-danger" id="btnStop"><i class="fa fa-stop"></i>STOP</button></td>
+                        <td><button type="button" class="btn btn-outline-warning" id="btnDown"><i class="fa fa-arrow-down"></i>DOWN</button></td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>  <!--End Jumbotron-->
+    <br />
+
+    <script>
+
+      //Toggle Switch
+      function renderSwitch(elementId_on, elementIdOff, snap) {
+        switch (snap.val()) {
+          case 0:
+            document.getElementById(elementId_on).className = "btn btn-success";
+            document.getElementById(elementIdOff).className =
+              "btn btn-outline-danger";
+            break;
+          case 1:
+            document.getElementById(elementId_on).className =
+              "btn btn-outline-success";
+            document.getElementById(elementIdOff).className = "btn btn-danger";
+
+            break;
+        }
+      }
+
+      function renderToggle(elemID, child){
+
+            var data = firebase.database().ref().child(child);
+              data.on('value', function(snap){
+                if(snap.val() == 1){
+                  toggleSwitch(elemID, 'on');
+                }
+                if(snap.val() == 0){
+                  toggleSwitch(elemID, 'off');
+                }
+
+              });
+
+      }
+      function renderLED(){
+        var data = firebase.database().ref().child('R_1');
+        data.on("value", function(snap){
+           switch(snap.val()){
+                case 1:
+                    document.getElementById("ledPower").src="images/led/ledoff.png";
+                    var data = firebase.database().ref().child('R_2');
+                        data.set(1);
+                    var data = firebase.database().ref().child('R_3');
+                        data.set(1);
+                    var data = firebase.database().ref().child('R_4');
+                        data.set(1);
+                    var data = firebase.database().ref().child('sensor/Current');
+                        data.set(0);
+                    var data = firebase.database().ref().child('sensor/Volt');
+                        data.set(0);
+                    var data = firebase.database().ref().child('sensor/tem');
+                        data.set(0);
+                break;
+                case 0:
+                    document.getElementById("ledPower").src="images/led/ledred.png";
+                break;
+           }
+        });
+        var data = firebase.database().ref().child('R_2');
+        data.on("value", function(snap){
+           switch(snap.val()){
+                case 1:
+                    document.getElementById("ledHeater").src="images/led/ledoff.png";
+                break;
+                case 0:
+                    document.getElementById("ledHeater").src="images/led/ledred.png";
+                break;
+           }
+        });
+        var data = firebase.database().ref().child('R_3');
+        data.on("value", function(snap){
+           switch(snap.val()){
+                case 1:
+                    document.getElementById("ledFinish").src="images/led/ledoff.png";
+                break;
+                case 0:
+                    document.getElementById("ledFinish").src="images/led/ledgreen.png";
+                break;
+           }
+        });
+        var data = firebase.database().ref().child('R_4');
+        data.on("value", function(snap){
+           switch(snap.val()){
+                case 1:
+                    document.getElementById("ledAlarm").src="images/led/ledoff.png";
+                break;
+                case 0:
+                    document.getElementById("ledAlarm").src="images/led/ledgreen.png";
+                break;
+           }
+        });
+
+
+      }
+      function renderMotorDir(){
+        var data = firebase.database().ref().child('MOTOR/DIR');
+        data.on("value", function(snap){
+           switch(snap.val()){
+                case 0:
+                    document.getElementById("btnUp").className = "btn btn-outline-warning";
+                    document.getElementById("btnStop").className = "btn btn-danger";
+                    document.getElementById("btnDown").className = "btn btn-outline-warning";
+                break;
+
+                case 1:
+                    document.getElementById("btnUp").className = "btn btn-warning";
+                    document.getElementById("btnStop").className = "btn btn-outline-danger";
+                    document.getElementById("btnDown").className = "btn btn-outline-warning";
+                break;
+
+                case 2:
+                    document.getElementById("btnUp").className = "btn btn-outline-warning";
+                    document.getElementById("btnStop").className = "btn btn-outline-danger";
+                    document.getElementById("btnDown").className = "btn btn-warning";
+                break;
+           }
+        });
+      }
+
+      function setButtonValue(btnId, fbchild, val) {
+        document.getElementById(btnId).addEventListener("click", function() {
+          var rootRef = firebase
+            .database()
+            .ref()
+            .child(fbchild);
+          rootRef.set(val);
+        });
+      }
+
+      //Switch Render
+      var relay1_value = firebase
+        .database()
+        .ref()
+        .child("R_1");
+      relay1_value.on("value", function(snap) {
+        renderSwitch("led1_on", "led1_off", snap);
+      });
+
+      var relay1_value = firebase
+        .database()
+        .ref()
+        .child("R_2");
+      relay1_value.on("value", function(snap) {
+        renderSwitch("led2_on", "led2_off", snap);
+      });
+
+      var relay2_value = firebase
+        .database()
+        .ref()
+        .child("R_3");
+      relay2_value.on("value", function(snap) {
+        renderSwitch("led3_on", "led3_off", snap);
+      });
+
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("R_4");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("led4_on", "led4_off", snap);
+      });
+      var relay1_value = firebase
+        .database()
+        .ref()
+        .child("R_1");
+      relay1_value.on("value", function(snap) {
+        renderSwitch("PowerON", "PowerOFF", snap);
+      });
+
+      var relay1_value = firebase
+        .database()
+        .ref()
+        .child("R1");
+      relay1_value.on("value", function(snap) {
+        renderSwitch("HeaterON", "HeaterOFF", snap);
+      });
+
+      var relay2_value = firebase
+        .database()
+        .ref()
+        .child("R2");
+      relay2_value.on("value", function(snap) {
+        renderSwitch("FinishON", "FinishOFF", snap);
+      });
+
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("R3");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("AlarmON", "AlarmOFF", snap);
+      });
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("R4");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("Upon", "Upoff", snap);
+      });
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("R5");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("Downon", "Downoff", snap);
+      });
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("R4");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("Stop", snap);
+      });
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("R5");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("Stop", snap);
+      });
+      var relay3_value = firebase
+        .database()
+        .ref()
+        .child("Motor");
+      relay3_value.on("value", function(snap) {
+        renderSwitch("MotorOn", "MotorOff", snap);
+      });
+
+      // Set value
+      setButtonValue("led1_on", "R_1", 0);
+      setButtonValue("led1_off", "R_1", 1);
+
+      setButtonValue("led2_on", "R_2", 0);
+      setButtonValue("led2_off", "R_2", 1);
+
+      setButtonValue("led3_on", "R_3", 0);
+      setButtonValue("led3_off", "R_3", 1);
+
+      setButtonValue("led4_on", "R_4", 0);
+      setButtonValue("led4_off", "R_4", 1);
+
+      setButtonValue("HeaterON", "R1", 0);
+      setButtonValue("HeaterOFF", "R1", 1);
+
+      setButtonValue("FinishON", "R2", 0);
+      setButtonValue("FinishOFF", "R2", 1);
+
+      setButtonValue("AlarmON", "R3", 0);
+      setButtonValue("AlarmOFF", "R3", 1);
+
+      setButtonValue("Upon", "R5", 1);
+      setButtonValue("Upon", "R4", 0);
+      setButtonValue("Upoff", "R4", 1);
+
+      setButtonValue("Downon", "R4", 1);
+      setButtonValue("Downon", "R5", 0);
+      setButtonValue("Downoff", "R5", 1);
+
+      setButtonValue("Stop", "R5", 1);
+      setButtonValue("Stop", "R4", 1);
+
+      setButtonValue("MotorOn", "Motor", 0);
+      setButtonValue("MotorOff", "Motor", 1);
+    </script>
+
+    <!-- toggle switch -->
+    <script>
+
+        $(function() {
+            $('#btnHeater').change(function() {
+                switch($(this).prop('checked')){
+                    case true:
+                        var data = firebase.database().ref().child('R1');
+                        data.set(0);
+                    break;
+                    case false:
+                        var data = firebase.database().ref().child('R1');
+                        data.set(1);
+                    break;
+                }
+
+            })
+
+            $('#btnFinish').change(function() {
+
+                switch($(this).prop('checked')){
+                    case true:
+                        var data = firebase.database().ref().child('R2');
+                        data.set(0);
+                    break;
+                    case false:
+                        var data = firebase.database().ref().child('R2');
+                        data.set(1);
+                    break;
+                }
+
+            })
+
+            $('#btnAlarm').change(function() {
+
+                switch($(this).prop('checked')){
+                    case true:
+                        var data = firebase.database().ref().child('R3');
+                        data.set(0);
+                    break;
+                    case false:
+                        var data = firebase.database().ref().child('R3');
+                        data.set(1);
+                    break;
+                }
+
+            })
+
+            $('#btnEnable').change(function() {
+
+                switch($(this).prop('checked')){
+                    case true:
+                        var data = firebase.database().ref().child("Motor");
+                        data.set(0);
+                    break;
+                    case false:
+                        var data = firebase.database().ref().child("Motor");
+                        data.set(1);
+                        var data = firebase.database().ref().child("R4");
+                        data.set(1);
+                        var data = firebase.database().ref().child("R5");
+                        data.set(1);
+                    break;
+                }
+
+            })
+        })
+
+        initial();
+        function initial(){
+            var data = firebase.database().ref().child('Motor');
+            var dir = firebase.database().ref().child('MOTOR/DIR');
+            var ena;
+            data.on("value", function(snap){
+                ena = snap.val();
+                if(ena == 1){
+                    document.getElementById("btnUp").disabled = true;
+                    document.getElementById("btnStop").disabled = true;
+                    document.getElementById("btnDown").disabled = true;
+                }
+                else{
+                    document.getElementById("btnUp").disabled = false;
+                    document.getElementById("btnStop").disabled = false;
+                    document.getElementById("btnDown").disabled = false;
+                }
+            });
+
+            //Render Toggle
+            renderToggle("#btnEnable","MOTOR/ENA");
+            renderToggle("#btnHeater","R_2");
+            renderToggle("#btnFinish","R_3");
+            renderToggle("#btnAlarm","R_4");
+            renderMotorDir();
+            renderLED()
+        }
+
+        document.getElementById("btnUp").addEventListener("click", function(){
+            var data = firebase.database().ref().child('R4');
+            data.set(0);
+            var data = firebase.database().ref().child('R5');
+            data.set(1);
+            var data = firebase.database().ref().child('MOTOR/DIR');
+            data.set(1);
+        });
+
+        document.getElementById("btnStop").addEventListener("click", function(){
+            var data = firebase.database().ref().child('R4');
+            data.set(1);
+            var data = firebase.database().ref().child('R5');
+            data.set(1);
+            var data = firebase.database().ref().child('MOTOR/DIR');
+            data.set(0);
+        });
+
+        document.getElementById("btnDown").addEventListener("click", function(){
+            var data = firebase.database().ref().child('R5');
+            data.set(0);
+            var data = firebase.database().ref().child('R4');
+            data.set(1);
+            var data = firebase.database().ref().child('MOTOR/DIR');
+            data.set(2);
+        });
+    </script>
+  </body>
+</html>

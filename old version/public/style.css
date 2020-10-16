@@ -1,0 +1,507 @@
+
+*{  margin: 0;
+    padding: 0;
+}
+
+h1 {
+  
+    font-weight: bold;
+    letter-spacing: 0.188em;
+    
+  }
+  #header1{
+    font-family: 'Varela Round', sans-serif;
+    text-shadow: 0.05em #333;
+  }
+
+.spec{
+    margin-top: 30px;
+    margin-bottom: 1.2em;
+    font-size: 13px;
+}
+.banner-text-items p {
+    margin-top: 1em;
+    text-decoration: overline;
+    font-family: 'Varela Round', sans-serif;
+    font-variant: small-caps;
+    font-size: 1.25em;
+    
+}
+
+/*ิbanner*/
+.banner{
+    background-image: url(background3.jpg);
+    background-repeat:no-repeat;
+    background-attachment : scroll;
+    width: auto;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+}
+
+.banner-text{
+    display: flex;
+    padding: 13% 0;
+
+}
+
+.banner-text-items{
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 0.188em;
+    color: white;
+    margin:auto;
+    text-align: center;
+    width: 60%;
+    
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+/*
+.top-bar{
+    background-color: black;
+    display: flex;
+    z-index: flex;
+    width:100%;
+    height: auto;
+}
+
+.logo{
+    color: white;
+    width : 10% ;
+    flex: 1;
+    font-size: 0.25em;
+    padding: 0.063em;
+    text-transform:uppercase;
+
+}
+
+.menu{
+    float: 0.188em;
+    
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;;
+    margin-top: 1.875em;
+    flex-flow: row wrap;
+
+}
+
+.menu ul li{
+    flex:1;
+    text-align: center;
+}
+
+.menu ul li a{
+    color:white;
+    font-size: 1.125em;
+    text-decoration: none;
+}
+*/
+
+.grid{
+    background: #333;
+}
+
+
+.relay{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+
+}
+
+.relay-item{
+
+    text-align: center;
+    font-weight: bold;
+    padding: 3rem 2rem;
+    margin-bottom: 5rem;
+    background-color: #e9ecef;
+    border-radius: 1.3rem;
+    margin-top: 60px;
+
+}
+
+.control{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1.25em; 
+    
+}
+
+.control p{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.063em;
+}
+
+h4{
+    
+    font-size: 1.688em;
+  
+}
+
+#head4{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+
+}
+
+/*
+.topnav {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    
+    text-decoration: none;
+    
+  }
+  .topnav1 a {
+    float: right;
+    font-size: 1.5em;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    margin-top: 0.938em;
+
+    
+    text-decoration: none;
+    
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+ 
+  .topnav .icon {
+    display: none;
+  }
+*/
+
+  /* Media Queries monitor screen iphone5/SE */
+  @media(max-width: 320px) {
+    .grid {
+      display: grid;
+      grid-template-columns: -1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #head4{
+        font-size: 18px;
+        font-weight: bold;
+    }     
+   
+    h1{
+        font-size: 33px;
+    }
+
+    svg {
+        left: -1px;
+    }   
+
+    .spec{
+        margin-top: 30px;
+        margin-bottom: 1.2em;
+        font-size: 13px;
+    }
+
+    .banner-text-items{
+        width: 70%;
+    }
+
+    .banner-text-items p{
+        margin-top: 0.875em;
+        font-size: 16px;
+    }
+      
+    .relay{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 4em;
+        margin-bottom: 0em;
+        padding-top: 0em;
+        margin-left: 0px;
+        
+    }
+
+    .relay-item{
+
+        text-align: center;
+        font-weight: bold;
+        padding: 2rem 2rem;
+        margin-left: 14.5px;
+        background-color: #e9ecef;
+        border-radius: 1.3rem;
+        font-size: 0.8em;
+        height: fit-content;
+        width: 90%;    
+        
+    }
+
+    #item1 {
+        margin-top:0em; 
+        margin-bottom: 13em;
+    }
+
+    #item2 {
+        margin-top:-10em; 
+    }
+
+    #item3 {
+        margin-top:-20em; 
+    }
+    
+    #item4 {
+        margin-top:-30em; 
+        margin-bottom: 3em;
+    }
+
+}
+
+    /* Media Queries monitor screen iphone6/7/8 */
+     @media(max-width: 375px) {
+    .grid {
+            display: grid;
+            grid-template-columns: -1fr repeat(2, minmax(auto, 25em)) 1fr;
+        }
+
+       
+        .spec{
+            margin-top: 30px;
+            margin-bottom: 1.2em;
+            font-size: 13px;
+        }
+
+        h1{
+            font-size: 35px;
+        }
+
+        #head4{
+            font-size: 18px;
+            font-weight: bold;
+          
+        }     
+        
+        .banner-text-items{
+            width: 85%;
+        }
+    
+        .banner-text-items p{
+            margin-top: 0.875em;
+        }
+        
+        .relay{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        margin-top: 0em;
+        padding-top: 0em;
+        }
+
+        .relay-item{
+
+        text-align: center;
+        font-weight: bold;
+        padding: 2rem 2rem;
+        margin-left: 14.5px;
+        margin-bottom: 50px;
+        background-color: #e9ecef;
+        border-radius: 1.3rem;
+        font-size: 0.8em;
+        height: fit-content;
+        width: 85%;    
+        }
+
+        #item1 {
+
+        
+        margin-left: 2.2em;
+        padding-right: 30px;
+        }
+
+        #item2 {
+        margin-top:-1em; 
+        margin-left: 2.2em;
+        padding-right: 30px;
+        }
+
+        #item3 {
+        margin-top:-7em; 
+        margin-left: 2.2em;
+        padding-right: 30px;
+        }
+    
+        #item4 {
+        margin-top:-13em; 
+        margin-left: 2.2em;
+        padding-right: 30px;
+        margin-bottom: 20px;
+        }
+
+        #T1 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #H1 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #S1 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        
+        #T2 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #H2 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #S2 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+   
+        #T3 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #H3 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #S3 {
+            margin-left: 16px;
+            margin-right: 8px;
+        } 
+        
+        #T4 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #H4 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+
+        #S4 {
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+    } 
+
+    /* Media Queries monitor screen iphone6/7/8 Plus*/
+    @media(max-width: 480px) {
+        .grid {
+        display: grid;
+        grid-template-columns: -1fr repeat(2, minmax(auto, 25em)) 1fr;
+        }
+
+       
+        svg{
+            left: 35px;
+        }
+        
+
+        .spec{
+            margin-top: 30px;
+            margin-bottom: 1.2em;
+            font-size: 13px;
+        }
+
+        h1{
+            font-size: 35px;
+        }
+
+        
+        #head4{
+            font-size: 1.688em;
+            font-weight: bold;
+          
+        }     
+        
+        .banner-text-items{
+            width: 80%;
+        }
+    
+        .banner-text-items p{
+            margin-top: 0.875em;
+        }
+        
+        .relay{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        margin-top: 0em;
+        padding-top: 0em;
+        margin-bottom: 1em;
+        }
+
+        .relay-item{
+
+        text-align: center;
+        font-weight: bold;
+        padding: 2rem 2rem;
+        margin-left: 29px;
+        background-color: #e9ecef;
+        border-radius: 1.3rem;
+        font-size: 0.8em;
+        height: fit-content;
+        width: 85%;    
+        }
+
+        
+        #item1 {
+            margin-bottom: 13em;
+            padding-right: 30px;
+            }
+    
+        #item2 {
+            margin-top:-10em; 
+            padding-right: 30px;
+            }
+    
+        #item3 {
+            margin-top:-25em; 
+            padding-right: 30px;
+            }
+        
+        #item4 {
+            margin-top:-40em; 
+            padding-right: 30px;
+            margin-bottom: 20px;
+            }
+}

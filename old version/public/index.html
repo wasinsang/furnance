@@ -1,0 +1,294 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furnance</title>
+
+  <!--Css-->
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Add Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- load Manifest -->
+  <link rel="manifest" href="manifest.json">
+ 
+  <link rel="apple-touch-icon" href="https://firebasestorage.googleapis.com/v0/b/furnace-c4069.appspot.com/o/android-icon-192x192.png?alt=media&token=feb3574a-0aff-4b8c-9b31-ae3f8e89597b">
+
+  <!-- load custom font -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Get bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--w3c shcool--->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Barlow:500|Titillium+Web|Varela+Round" rel="stylesheet">
+
+  <!-- Get bootstrap Java script -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<!-- Copy Firebase to your web app -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCuWkHp_g9aLckpun0MgWRVXugbI40iXsE",
+  authDomain: "furnace-c4069.firebaseapp.com",
+  databaseURL: "https://furnace-c4069.firebaseio.com",
+  projectId: "furnace-c4069",
+  storageBucket: "furnace-c4069.appspot.com",
+  messagingSenderId: "809059919567",
+  appId: "1:809059919567:web:5e7316af029e495d"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Copy Firebase to your web app -->
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+
+<script src="S4.js"></script>
+<script src="H4.js"></script>
+<script src="T4.js"></script>
+<script src="justgage.js"></script>
+<script src="raphael-2.1.4.min.js"></script>
+</head>
+<body>    
+ 
+  <!--<section id="section-a" class="grid">
+  <div class="topnav" id="myTopnav">
+    <a href="#home" ><img src="icon-72x72.png" width="100%"></a>
+    
+    <div class="topnav1" id="myTopnav"> 
+       <a href="#">Contact &nbsp;</a> 
+       <a href="#">About  &nbsp; &nbsp;</a> 
+       <a href="#">Home  &nbsp;  &nbsp;</a>
+  </div>
+</div>
+ 
+  <div class="top-bar">
+    <div class="container" ><img src="logo.png" width="10%"></div>
+    <div class="menu">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>-->
+
+<!--banner-->
+
+<div class="grid">
+<div class="banner">
+  <div class="banner-text">
+    <div class="banner-text-items">
+       
+      <h1 text-center id="header1">Furnance IOT </h1>
+    </div>
+  </div>
+</div>
+</div>
+
+              <h4 id="head4">Volt </h4>
+              <div id="T4" style="width: 200px; height: 150px;"></div>
+              <h4 id="head4">Current </h4>
+              <div id="H4" style="width: 200px; height: 150px;"></div>
+              <h4 id="head4">Temperature </h4>
+              <div id="S4" style="width: 200px; height: 150px;"></div>
+              <p>LEMP</p>
+            <div class="btn-group-vertical" id="N1">
+             <button type="button" class="btn btn-outline-success" id="led1_on">Power ON</button>
+             <button type="button" class="btn btn-danger" id="led1_off">Power OFF</button>
+            </div>
+            <div class="btn-group-vertical">
+             <button type="button" class="btn btn-outline-success" id="led2_on">Heater ON</button>
+             <button type="button" class="btn btn-danger" id="led2_off">Heater OFF</button>
+            </div>
+            <div class="btn-group-vertical">
+             <button type="button" class="btn btn-outline-success" id="led3_on">Finish ON</button>
+             <button type="button" class="btn btn-danger" id="led3_off">Finish OFF</button>
+            </div>
+            <div class="btn-group-vertical">
+              <button type="button" class="btn btn-outline-success" id="led4_on">Safety ON</button>
+              <button type="button" class="btn btn-danger" id="led4_off">Safety OFF</button>
+            </div>
+            <br>
+            <p>ConTrol</p>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-outline-success" id="HeaterON">Heater ON</button>
+                <button type="button" class="btn btn-danger" id="HeaterOFF">Heater OFF</button>
+               </div>
+               <div class="btn-group-vertical">
+                <button type="button" class="btn btn-outline-success" id="FinishON">Finish ON</button>
+                <button type="button" class="btn btn-danger" id="FinishOFF">Finish OFF</button>
+               </div>
+               <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-outline-success" id="AlarmON">Safety ON</button>
+                 <button type="button" class="btn btn-danger" id="AlarmOFF">Safety OFF</button>
+               </div>
+               <div class="btn-group-vertical">
+                <button type="button" class="btn btn-outline-success" id="Upon">UP</button>
+                <button type="button" class="btn btn-danger" id="Upoff">Up</button>
+               </div>
+               <div class="btn-group-vertical">
+                <button type="button" class="btn btn-outline-success" id="Stop">Stop</button>
+              </div>
+               <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-outline-success" id="Downon">Down</button>
+                 <button type="button" class="btn btn-danger" id="Downoff">Down</button>
+               </div>
+               <div class="btn-group-vertical">
+                <button type="button" class="btn btn-outline-success" id="MotorOn">Motor Start</button>
+                <button type="button" class="btn btn-danger" id="MotorOff">Motor Stop</button>
+              </div>
+               
+
+  </div>
+<script>
+
+    function renderSwitch(elementId_on, elementIdOff, snap){
+      switch(snap.val()){
+        case 0: 
+        document.getElementById(elementId_on).className = "btn btn-success";
+        document.getElementById(elementIdOff).className = "btn btn-outline-danger";
+        break;
+        case 1:
+        document.getElementById(elementId_on).className = "btn btn-outline-success";
+        document.getElementById(elementIdOff).className = "btn btn-danger"; 
+         
+        break;
+      }
+    }
+
+    function setButtonValue(btnId, fbchild, val){
+      document.getElementById(btnId).addEventListener("click", function(){
+      var rootRef = firebase.database().ref().child(fbchild);
+      rootRef.set(val);
+    });
+    }
+
+    //Switch Render 
+    var relay1_value = firebase.database().ref().child("R_1")
+    relay1_value.on("value",function(snap){
+      renderSwitch("led1_on","led1_off",snap)
+    });
+
+    var relay1_value = firebase.database().ref().child("R_2")
+    relay1_value.on("value",function(snap){
+      renderSwitch("led2_on","led2_off",snap)
+    });
+
+    var relay2_value = firebase.database().ref().child("R_3")
+    relay2_value.on("value",function(snap){
+      renderSwitch("led3_on","led3_off",snap)
+    });
+
+    var relay3_value = firebase.database().ref().child("R_4")
+    relay3_value.on("value",function(snap){
+      renderSwitch("led4_on","led4_off",snap)
+    });
+    var relay1_value = firebase.database().ref().child("R_1")
+    relay1_value.on("value",function(snap){
+      renderSwitch("PowerON","PowerOFF",snap)
+    });
+
+    var relay1_value = firebase.database().ref().child("R1")
+    relay1_value.on("value",function(snap){
+      renderSwitch("HeaterON","HeaterOFF",snap)
+    });
+
+    var relay2_value = firebase.database().ref().child("R2")
+    relay2_value.on("value",function(snap){
+      renderSwitch("FinishON","FinishOFF",snap)
+    });
+
+    var relay3_value = firebase.database().ref().child("R3")
+    relay3_value.on("value",function(snap){
+      renderSwitch("AlarmON","AlarmOFF",snap)
+    });
+    var relay3_value = firebase.database().ref().child("R4")
+    relay3_value.on("value",function(snap){
+      renderSwitch("Upon","Upoff",snap)
+    });
+    var relay3_value = firebase.database().ref().child("R5")
+    relay3_value.on("value",function(snap){
+      renderSwitch("Downon","Downoff",snap)
+    });
+    var relay3_value = firebase.database().ref().child("R4")
+    relay3_value.on("value",function(snap){
+      renderSwitch("Stop",snap)
+    });
+    var relay3_value = firebase.database().ref().child("R5")
+    relay3_value.on("value",function(snap){
+      renderSwitch("Stop",snap)
+    });
+    var relay3_value = firebase.database().ref().child("Motor")
+    relay3_value.on("value",function(snap){
+      renderSwitch("MotorOn","MotorOff",snap)
+    });
+
+
+
+    // Set value
+    setButtonValue("led1_on", "R_1", 0);
+    setButtonValue("led1_off", "R_1", 1);
+
+    setButtonValue("led2_on", "R_2", 0);
+    setButtonValue("led2_off", "R_2", 1);
+
+    setButtonValue("led3_on", "R_3", 0);
+    setButtonValue("led3_off", "R_3", 1);
+
+    setButtonValue("led4_on", "R_4", 0);
+    setButtonValue("led4_off", "R_4", 1);
+
+    setButtonValue("HeaterON", "R1", 0);
+    setButtonValue("HeaterOFF", "R1",1);
+
+    setButtonValue("FinishON", "R2", 0);
+    setButtonValue("FinishOFF", "R2",1);
+
+    setButtonValue("AlarmON", "R3", 0);
+    setButtonValue("AlarmOFF", "R3", 1);
+    
+    setButtonValue("Upon", "R5", 1);
+    setButtonValue("Upon", "R4", 0);
+    setButtonValue("Upoff", "R4",1);
+
+    setButtonValue("Downon", "R4", 1);
+    setButtonValue("Downon", "R5", 0);
+    setButtonValue("Downoff", "R5", 1);
+
+    setButtonValue("Stop", "R5", 1);
+    setButtonValue("Stop", "R4", 1);
+
+    setButtonValue("MotorOn", "Motor", 0);
+    setButtonValue("MotorOff", "Motor", 1);
+
+</script>
+
+
+
+
+</body></html>
